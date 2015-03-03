@@ -15,8 +15,10 @@ public class GuessTheNumber {
 			int right = 100;
 			int middle;
 			String answer;
+			int counter = 0;
 			while (true) {
 				middle = (int)Math.ceil((right + left) / 2.0);
+				System.out.println("Attempt #" + ++counter);
 				System.out.println("Is your nubmer less than " + middle + "? (y/n)");
 				answer = scanner.nextLine();
 				if (answer.equals("y")) {
@@ -24,10 +26,8 @@ public class GuessTheNumber {
 				} else if (answer.equals("n")) {
 					left = middle;
 				}
-				System.out.print(left + ", ");
-				System.out.println(right);
 				if (right == left) {
-					System.out.println("Your number is " + left);
+					System.out.println("Your number is " + left + ". " + counter + " attempts. Told you ;)");
 					break;
 				}
 			}
