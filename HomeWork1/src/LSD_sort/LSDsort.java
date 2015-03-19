@@ -1,8 +1,5 @@
 package LSD_sort;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LSDsort {
 
 	// base = 10
