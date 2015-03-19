@@ -19,9 +19,7 @@ public class LSDsort {
 		for (int idx = 0; idx < 10; idx++){
 			count[idx+1] += count[idx];
 		}
-//		for (int i = 0; i < count.length; i++) {
-//			System.out.println(count[i]);
-//		}
+
 		for (int idx = 0; idx < array.length; idx++) {
 			int number = (array[idx] / (int)Math.pow(10.0, (float)iter)) % 10;
 			aux[count[number]++] = array[idx];
